@@ -28,15 +28,15 @@ public class Rent
         Person.Debit = Price;
     }
 
-    //11 - Implemente os métodos de `cancelar` e `finalizar` um aluguel
     public void Cancel()
     {
-        throw new NotImplementedException();
+        Vehicle.IsRented = false;
+        Person.Debit += Price;
+        Status = RentStatus.Canceled;
     }
 
-    //11 - Implemente os métodos de `cancelar` e `finalizar` um aluguel
     public void Finish()
     {
-        throw new NotImplementedException();
+        Status = RentStatus.Finished;
     }
 }
