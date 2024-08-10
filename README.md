@@ -5,7 +5,7 @@ Este projeto é uma aplicação de console desenvolvida em C#, que serve como um
 * Processo de Aluguel: Simulação do processo de aluguel com diferentes tipos de clientes e cálculo de taxas de aluguel com base no tipo de veículo e na duração do aluguel.
 * Enumeração para Atributos: Uso de enums para atributos como tipo de combustível, tipo de freio e tipo de tração.
 
-## Execução do Projeto
+## Principais funcionalidades incluem
 Para executar o projeto, siga os passos abaixo:
 
 1. Clone o repositório:
