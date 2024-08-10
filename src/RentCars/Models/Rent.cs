@@ -10,10 +10,22 @@ public class Rent
     public double Price { get; set; }
     public RentStatus Status { get; set; }
 
-    //10 - Crie o construtor de `Rent` seguindo as regras de negócio
     public Rent(Vehicle vehicle, Person person, int daysRented)
     {
-        throw new NotImplementedException();
+        Vehicle = vehicle;
+        Person = person;
+        DaysRented = daysRented;
+        Status = RentStatus.Confirmed;
+        Vehicle.IsRented = true;
+
+        Price = vehicle.PricePerDay * daysRented;
+        if (Person.GetType() == typeof(LegalPerson))
+        {
+            double discount = 0.1;
+            Price -= discount;
+        }
+
+        Person.Debit = Price;
     }
 
     //11 - Implemente os métodos de `cancelar` e `finalizar` um aluguel
